@@ -40,6 +40,9 @@ namespace EAwinforms
                 {
                     textBox1.Text = openfile.FileName;
                     fieldmist.Visible = false;
+                    button2.Focus() ;
+                   // OnTabStopChanged( e);
+                    //TabStop = false; 
                 }
                     
             }
@@ -48,29 +51,20 @@ namespace EAwinforms
 
 
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e1)
         {
             using (FolderBrowserDialog save_file = new FolderBrowserDialog()) 
             {
                 if (save_file.ShowDialog()==DialogResult.OK)
                 {
                     textBox2.Text = save_file.SelectedPath;
+                    button3.Focus();
                 }
                 fieldmist.Visible = false;
+                
             }
 
-            //using (SaveFileDialog savefile = new SaveFileDialog())
-            //{
-            //    savefile.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory);
-            //    savefile.Filter = "Text files(*.txt)|*.txt";
-            //    if (savefile.ShowDialog() == DialogResult.OK)
-            //    {
-            //        textBox2.Text = savefile.FileName; ;
-                   
-            //    }
-
-
-            //}
+            
 
         }
 
@@ -88,8 +82,8 @@ namespace EAwinforms
                 MyProgram myProgram = new MyProgram(this);
 
                 await Task.Run(() => myProgram.Maining());
-               
 
+                
                 fieldmist.Visible = false;
               
             }
