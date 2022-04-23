@@ -1,0 +1,52 @@
+﻿~ Command `ProCmdMmParams` 
+~ Arm `relation_dlg` `ParamsPHLay.ParTable` 2 `rowМАТЕРИАЛ` `value`
+~ Disarm `relation_dlg` `ParamsPHLay.ParTable` 2 `rowМАТЕРИАЛ` `value`
+~ Select `relation_dlg` `ParamsPHLay.ParTable` 2 `rowМАТЕРИАЛ` `value`
+~ Key `relation_dlg` `ParamsPHLay.ParTable` 540147762 `2`
+~ Update `relation_dlg` `ParamsPHLay.ParTable_INPUT` \
+!--------------------------МАТЕРИАЛ---------------------------
+ `Круг`
+!-----------------------------------------------------------------
+~ Arm `relation_dlg` `ParamsPHLay.ParTable` 2 `rowМАТЕРИАЛ_ВЕРХН` `value`
+~ Disarm `relation_dlg` `ParamsPHLay.ParTable` 2 `rowМАТЕРИАЛ_ВЕРХН` `value`
+~ Select `relation_dlg` `ParamsPHLay.ParTable` 2 `rowМАТЕРИАЛ_ВЕРХН` `value`
+~ Key `relation_dlg` `ParamsPHLay.ParTable` 540409910 `6`
+~ Update `relation_dlg` `ParamsPHLay.ParTable_INPUT` \
+!--------------------------МАТЕРИАЛ_ВЕРХН-----------------------
+ `В2-II-НД-10 ГОСТ 2590-2006`
+!-----------------------------------------------------------------
+~ Arm `relation_dlg` `ParamsPHLay.ParTable` 2 `rowМАТЕРИАЛ_НИЖН` `value`
+~ Disarm `relation_dlg` `ParamsPHLay.ParTable` 2 `rowМАТЕРИАЛ_НИЖН` `value`
+~ Select `relation_dlg` `ParamsPHLay.ParTable` 2 `rowМАТЕРИАЛ_НИЖН` `value`
+~ Key `relation_dlg` `ParamsPHLay.ParTable` 540278836 `4`
+~ Update `relation_dlg` `ParamsPHLay.ParTable_INPUT` \
+!--------------------------МАТЕРИАЛ_НИЖН------------------------
+ `  40X ГОСТ 4543-2016`
+!------------------------------------------------------------------
+~ Activate `relation_dlg` `PB_OK`
+~ Close `main_dlg_cur` `appl_casc`
+~ Command `ProCmdMmModelProperties` 
+~ Activate `mdlprops_dlg` `MATERIAL_lay_Controls.push_Change.lay_instance`
+~ Select `finder` `FFileListPHLay.Filelist` 1 `steel.mtl`
+~ Activate `finder` `FFileListPHLay.Filelist` 1 `steel.mtl`
+~ Activate `UI Message Dialog` `ok`
+~ Activate `UI Message Dialog` `no`
+~ Exit `finder` `FShortcutPHLay.TB_Shortcuts`
+~ RButtonArm `finder` `FModelList` `STEEL`
+~ PopupOver `finder` `InModelPopup` 1 `FModelList`
+~ Open `finder` `InModelPopup`
+~ Close `finder` `InModelPopup`
+~ Activate `finder` `FAssignPushPopup`
+~ Activate `UI Message Dialog` `ok`
+~ Activate `finder` `FOkPush`
+~ Activate `mdlprops_dlg` `DlgClose_push`
+~ Expand `main_dlg_cur` `PHTLeft.AssyTree` `node1`
+~ Trail `UI Desktop` `UI Desktop` `PREVIEW_POPUP_TIMER` \
+ `main_dlg_w1:PHTLeft.AssyTree:<NULL>`
+~ Select `main_dlg_cur` `PHTLeft.AssyTree` 1 `node9`
+~ RButtonArm `main_dlg_cur` `PHTLeft.AssyTree` `node9`
+~ PopupOver `main_dlg_cur` `PM_PHTLeft.AssyTree` 1 `PHTLeft.AssyTree`
+~ Open `main_dlg_cur` `PM_PHTLeft.AssyTree`
+~ Close `main_dlg_cur` `PM_PHTLeft.AssyTree`
+~ Command `ProCmdMmAssignMaterial@PopupMenuTree` 
+~ Collapse `main_dlg_cur` `PHTLeft.AssyTree` `node9`
